@@ -16,3 +16,5 @@ const MyComponent = () => (
     <MyOtherComponent type="b" />
   </div>
 );
+
+//Code here
