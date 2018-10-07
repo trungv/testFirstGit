@@ -1,0 +1,18 @@
+// Dirty
+const MyComponent = () => (
+  <div>
+    <OtherComponent type="a" className="colorful" foo={123} bar={456} />
+    <OtherComponent type="b" className="colorful" foo={123} bar={456} />    
+  </div>
+);
+
+// Clean
+const MyOtherComponent = ({ type }) => (
+  <OtherComponent type={type} className="colorful" foo={123} bar={456} />
+);
+const MyComponent = () => (
+  <div>
+    <MyOtherComponent type="a" />
+    <MyOtherComponent type="b" />
+  </div>
+);
